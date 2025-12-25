@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { DarkModeProvider } from './contexts/DarkModeContext'
 import Navigation from './components/Navigation'
 import Home from './sections/Home'
 import About from './sections/About'
@@ -31,16 +32,18 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen">
-      <Navigation activeSection={activeSection} />
-      <main>
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-    </div>
+    <DarkModeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <Navigation activeSection={activeSection} />
+        <main>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
+      </div>
+    </DarkModeProvider>
   )
 }
 

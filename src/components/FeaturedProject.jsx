@@ -1,32 +1,32 @@
 const FeaturedProject = ({ project }) => {
   return (
-    <article className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
+    <article className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
       <div className="bg-accent text-white px-6 py-2 text-sm font-medium">
         Featured Project
       </div>
       
       <div className="p-8">
-        <h3 className="text-3xl font-semibold text-gray-900 mb-4">{project.title}</h3>
+        <h3 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">{project.title}</h3>
         
         <div className="space-y-4 mb-6">
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Problem</h4>
-            <p className="text-gray-700 leading-relaxed">{project.description}</p>
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Problem</h4>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{project.description}</p>
           </div>
           
           <div>
-            <h4 className="text-sm font-semibold text-gray-900 mb-2">Solution</h4>
-            <p className="text-gray-700 leading-relaxed">{project.solution}</p>
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Solution</h4>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{project.solution}</p>
           </div>
         </div>
 
         <div className="mb-6">
-          <h4 className="text-sm font-semibold text-gray-900 mb-3">Technologies</h4>
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Technologies</h4>
           <div className="flex flex-wrap gap-2">
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1 bg-gray-100 text-gray-700 text-sm font-medium rounded"
+                className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm font-medium rounded"
               >
                 {tech}
               </span>
@@ -53,7 +53,7 @@ const FeaturedProject = ({ project }) => {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 border-2 border-gray-300 text-gray-900 font-medium rounded-lg hover:border-gray-400 transition-colors flex items-center gap-2"
+              className="px-6 py-2 border-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white font-medium rounded-lg hover:border-gray-400 dark:hover:border-gray-600 transition-colors flex items-center gap-2"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
